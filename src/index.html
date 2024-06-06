@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>ToDoList</h1>
+    </header>
+    <section class="main-section">
+        <section class="nav-section">
+            <h2>Projects</h2>
+            <nav>
+               <button id="add-proj">Add Project</button>
+               <ul id="projects"></ul>
+            </nav>
+        </section>
+        <section class="task-section">
+            <button id="add-task">Add Task</button>
+            <dialog id="task-dialog">
+                    <textarea placeholder="Enter Task"></textarea>
+                    <p class="priority position">
+                        <label>Priority</label>
+                        <select>
+                            <option value="High">High</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </p>
+                    <p class="due-date position">
+                        <label>Date</label>
+                        <input type="date"/>
+                    </p>
+                    <p class="buttons">
+                        <button class="confirm z-index">Add Task</button>
+                        <button id= "cancel-task" class="cancel z-index">Cancel</button>
+                    </p>
+            </dialog>
+            <div id="tasks" class="tasks">
+            </div>
+        </section>
+    </section>
+</body>
+</html>
