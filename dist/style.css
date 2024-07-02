@@ -1,0 +1,275 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color:azure;
+    height: 100vh;
+    margin: 0px;
+}
+
+nav{
+    height: 100vh;
+    width: 20vw;
+    min-width: max-content;
+    background-color:azure;
+    flex: 2 1 auto;
+    border: 1px solid black;
+    border-right: 0px;
+    padding-top: 8px;
+}
+
+ul{
+    padding: 0px;
+    width: 100%;
+}
+
+li{
+    display: block;
+    font-size: 32px;
+    list-style: none;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-right: auto;
+    padding: 8px;
+    justify-content: flex-start;
+}
+
+header{
+    width: 100%;
+    background-color: chocolate;
+    color: white;
+}
+
+h1{
+    height: 100%;
+    width: 80%;
+    font-size: 60px;  
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100vw;
+}
+
+.task-section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 80vw;
+    flex: 1 2 auto;
+    border: 1px black solid;
+    background-color: azure;
+}
+
+textarea{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    padding: 8px;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 3px;
+    background-color: azure;
+}
+
+dialog{
+    width: 600px;
+    height: 300px;
+    font-size: 20px;
+    padding: 0px;
+    border: 0px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: azure;
+}
+
+.z-index{
+    height: 40px;
+    font-size: 18px;
+    padding: 8px;
+    bottom: 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+.confirm{
+    color: black;
+    right: 10px;
+    bottom: 5px;
+    border-radius: 8px;
+    background-color: azure;
+}
+
+:hover.confirm{
+    background-color: green;
+    color: white;
+}
+
+:hover.cancel{
+    background-color: brown;
+    color: white;
+}
+
+.cancel{
+    color: black;
+    left: 10px;
+    bottom: 5px;
+    border-radius: 8px;
+    background-color: azure;
+}
+
+.add-btn{
+    border: none;
+    color:rgb(210, 105, 30);
+    padding: 0px;
+    padding-top: 5px; 
+}
+
+.add-btn:hover{
+    color: green;
+}
+
+.buttons{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    border-top: 2px rgb(0, 0, 0,0.2) solid;
+    margin: 0px;
+}
+
+.position{
+    position: absolute;
+    z-index: 2;
+    bottom: 30%;
+}
+
+.left{
+    left: 10px;
+}
+
+.right{
+    right: 30%;
+}
+
+.flex-container{
+    flex: 1 1 auto;
+    max-height:75px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+span{
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+}
+
+
+.project:hover{
+    color: rgb(108, 108, 108);
+}
+
+
+.nav-item-btns{
+    margin-left: 8px;
+    border-top: 1px solid black;
+
+}
+
+
+.add-proj-icon{
+    display: flex;
+    font-size: 20px;
+    margin: 8px;
+    padding-bottom: 8px;
+    padding-right: 0px;
+}
+
+.icon{
+    position: fixed;
+    bottom: 5vh;
+    right: 10px;
+    display: inline;
+    font-size: 20px;
+    border: 0px;
+    padding-left: 4px;
+}
+
+.task-item{
+    max-width: 60%;
+    background-color: azure;
+    flex: 1;
+    font-size: 22px;
+    color:black;
+    text-align:center;
+    margin: 0px;
+    padding-top: 24px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.priority{
+    flex:1;
+    max-width: 100px;
+    min-width: 85px;
+}
+
+.trash,.edit{
+    flex: 1;
+    min-width: 30px;
+    max-width: 35px;
+    padding-top: 6px;
+}
+
+.edit{
+    border: 0px;
+    border-bottom: 1px solid black;
+}
+
+.trash{
+    color: red;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 0px;
+}
+
+.edit:hover{
+    background-color: yellow;
+
+}
+
+.trash:hover{
+    background-color: brown;
+}
+
+.date{
+    flex: 1;
+    vertical-align: baseline;
+}
+
+.default-project:hover{
+    background-color: gainsboro;
+}
+
+#task-list{
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    background-color:azure;
+}
+
+#due-date,select{
+    font-size: 16px;
+    padding: 4px;
+    width: max-content;
+}
