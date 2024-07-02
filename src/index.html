@@ -4,44 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>ToDoList</h1>
+    <header class="header">
+        <h1 id="header">ToDoList</h1>
     </header>
-    <section class="main-section">
-        <section class="nav-section">
-            <h2>Projects</h2>
+    <div class="container">
             <nav>
-               <button id="add-proj">Add Project</button>
-               <ul id="projects"></ul>
+                <span class="add-proj-icon"><button class="fa-solid fa-plus fa-2xl add-btn" id="add-proj"></button></span>
+               <ul id="projects">
+               </ul>
             </nav>
+        <section id="task-section" class="task-section">
+            <div id="task-list">
+            </div>  
+            <span class="icon"><button class="fa-solid fa-plus fa-2xl add-btn" id="new-task"></button></span>
         </section>
-        <section class="task-section">
-            <button id="add-task">Add Task</button>
-            <dialog id="task-dialog">
-                    <textarea placeholder="Enter Task"></textarea>
-                    <p class="priority position">
-                        <label>Priority</label>
-                        <select>
-                            <option value="High">High</option>
-                            <option value="Normal">Normal</option>
-                            <option value="Low">Low</option>
-                        </select>
-                    </p>
-                    <p class="due-date position">
-                        <label>Date</label>
-                        <input type="date"/>
-                    </p>
-                    <p class="buttons">
-                        <button class="confirm z-index">Add Task</button>
-                        <button id= "cancel-task" class="cancel z-index">Cancel</button>
-                    </p>
-            </dialog>
-            <div id="tasks" class="tasks">
+            <div>
+                <dialog id="task-dialog">
+                    <textarea id="task" placeholder="Enter Task"></textarea>
+                        <p class="right position">
+                            <label>Priority</label>
+                            <select id="priority">
+                                <option value="High">High</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </p>
+                        <p class="left position">
+                            <label>Date</label>
+                            <input id="due-date" type="date"/>
+                        </p>
+                        <p class="buttons">
+                            <button id="confirm-task" class="confirm z-index">Add Task</button>
+                            <button id= "cancel-task" class="cancel z-index">Cancel</button>
+                            <button id="apply-edit" class="confirm z-index">Apply Edit</button>
+                        </p>
+                </dialog>
             </div>
-        </section>
-    </section>
+    </div>
 </body>
 </html>
