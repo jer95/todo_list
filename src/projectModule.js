@@ -36,6 +36,7 @@ header.textContent = projName;
 // create new proj object
 let newProj = new Project(projName)
 newProj.tasks = []
+localStorage.setItem(newProj.name,JSON.stringify(newProj))
 
 // update proj tracker with new project
 trackProjects.addProj(newProj)
